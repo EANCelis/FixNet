@@ -20,12 +20,12 @@ Fixnet es una aplicación web desarrollada como Proyecto Final del **Grupo 3 - F
 - 🎨 Pintor
 - 🔥 Gasista
 - 🌿 Jardinero
-- 🪚 Carpintero
+- 🪑 Carpintero
 - 🔑 Cerrajero
 - 🚛 Fletero
 - 🧹 Limpieza
 - 👨‍🍳 Cocinero
-- 🪟 Vidriero
+- 🏠 Vidriero
 - ⚙️ Herrero
 - 🔒 Instalador de alarmas
 - 🐕 Paseador de perros
