@@ -18,7 +18,8 @@ namespace Servicios
     {
 
         //readonly string connectionString = "data source=localhost\\SQLSERVER;initial catalog=Proyecto_Final_Integrador;trusted_connection=true";
-        readonly string connectionString = "data source=localhost\\SQLEXPRESS;initial catalog=Proyecto_Final_Integrador;trusted_connection=true";
+        //readonly string connectionString = "data source=localhost\\SQLEXPRESS;initial catalog=Proyecto_Final_Integrador;trusted_connection=true";
+        readonly string connectionString = "workstation id=Proyecto_Final_Integrador.mssql.somee.com;packet size=4096;user id=Asd123456_SQLLogin_1;pwd=pkevryzn4l;data source=Proyecto_Final_Integrador.mssql.somee.com;persist security info=False;initial catalog=Proyecto_Final_Integrador;TrustServerCertificate=True";
 
 
         public int RegistrarUsuarioBD(Usuario NuevoUsuario)
@@ -611,7 +612,7 @@ namespace Servicios
 
         public DataTable TraerTurnosCliente(int idCliente)
         {
-            string query = @"SELECT 
+            string query = @"SELECT TOP 20
                         T.IdTurno,
                         T.Estado,
                         T.IdCliente,
@@ -646,7 +647,7 @@ namespace Servicios
 
         public DataTable TraerTurnosPrestador(int idPrestador)
         {
-            string query = @"SELECT 
+            string query = @"SELECT TOP 20
                         T.IdTurno,
                         T.FechaSolicitud,
                         T.Estado,
@@ -666,7 +667,6 @@ namespace Servicios
                     INNER JOIN Usuario U ON U.IdUsuario = C.IdUsuario
                     INNER JOIN Servicios S ON S.IdServicio = T.IdServicio
                     WHERE T.IdPrestador = @IdPrestador
-                    AND T.FechaSolicitud >= DATEADD(DAY, -10, GETDATE())
                     ORDER BY T.FechaSolicitud DESC";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
