@@ -51,6 +51,15 @@ namespace Fixnet
         protected global::System.Web.UI.WebControls.Button BtnCalificar;
 
         /// <summary>
+        /// Control BtnConfirmarCalificacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnConfirmarCalificacion;
+
+        /// <summary>
         /// Control BtnVolverAlPerfil.
         /// </summary>
         /// <remarks>

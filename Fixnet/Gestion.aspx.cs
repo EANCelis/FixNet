@@ -25,7 +25,8 @@ namespace Fixnet
 
             if (!esPrestador)
             {
-                Response.Redirect("/PerfilUsuario.aspx");
+                Response.Redirect("~/PerfilUsuario.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
                 return;
             }
 
