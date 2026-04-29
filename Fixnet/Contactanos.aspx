@@ -26,7 +26,7 @@
 
                         <div class="floating">
                             <label>Nombre</label>
-                            <input type="text" id="inputNombre" class="form-control" placeholder=" " />
+                            <input type="text" id="inputNombre" class="form-control" placeholder="Tu nombre" />
                         </div>
 
                         <div class="floating">
