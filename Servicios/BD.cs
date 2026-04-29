@@ -18,8 +18,7 @@ namespace Servicios
     {
 
         //readonly string connectionString = "data source=localhost\\SQLSERVER;initial catalog=Proyecto_Final_Integrador;trusted_connection=true";
-        //readonly string connectionString = "data source=localhost\\SQLEXPRESS;initial catalog=Proyecto_Final_Integrador;trusted_connection=true";
-        readonly string connectionString = "workstation id=Proyecto_Final_Integrador.mssql.somee.com;packet size=4096;user id=Asd123456_SQLLogin_1;pwd=pkevryzn4l;data source=Proyecto_Final_Integrador.mssql.somee.com;persist security info=False;initial catalog=Proyecto_Final_Integrador;TrustServerCertificate=True";
+        readonly string connectionString = "data source=localhost\\SQLEXPRESS;initial catalog=Proyecto_Final_Integrador;trusted_connection=true";
 
 
         public int RegistrarUsuarioBD(Usuario NuevoUsuario)
@@ -106,7 +105,30 @@ namespace Servicios
                 }
             }
         }
+	
+	public bool ConversacionEliminadaPor(int idConversacion, int idUsuario)
+	{
+	    string query = @"
+	                    SELECT 
+            	            CASE WHEN CL.IdUsuario = @IdUsuario THEN ISNULL(C.EliminadoPorCliente, 0)
+                	        ELSE ISNULL(C.EliminadoPorPrestador, 0)
+        	                END
+	                    FROM Conversacion C
+        	            INNER JOIN Cliente   CL ON CL.IdCliente   = C.IdCliente
+	                    INNER JOIN Prestador PR ON PR.IdPrestador = C.IdPrestador
+        	            WHERE C.IdConversacion = @IdConversacion
+	                      AND (CL.IdUsuario = @IdUsuario OR PR.IdUsuario = @IdUsuario)";
 
+	    using (SqlConnection conn = new SqlConnection(connectionString))
+	    using (SqlCommand cmd = new SqlCommand(query, conn))
+	    {
+	        cmd.Parameters.AddWithValue("@IdConversacion", idConversacion);
+        	cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+	        conn.Open();
+	        var result = cmd.ExecuteScalar();
+        	return result != null && Convert.ToBoolean(result);
+	    }
+	}
         public Usuario LogearUsuario(string email, string password)
         {
             string query = @"SELECT

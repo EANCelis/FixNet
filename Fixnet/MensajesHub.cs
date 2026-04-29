@@ -59,7 +59,7 @@ namespace Fixnet
             await Clients.OthersInGroup("conv-" + idConversacion).nuevoMensaje(mensaje);
 
             int otroUsuarioId = _mgr.ObtenerOtroUsuarioDeConversacion(idConversacion, idEmisor);
-            if (otroUsuarioId > 0)
+            if (otroUsuarioId > 0 && !_mgr.ConversacionEliminadaPor(idConversacion, otroUsuarioId))
             {
                 await Clients.Group("user-" + otroUsuarioId).nuevoMensaje(mensaje);
 

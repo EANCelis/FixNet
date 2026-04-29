@@ -33,7 +33,11 @@ namespace Negocio
         {
             return Conexion.ObtenerOCrearConversacion(idTurno, idCliente, idPrestador);
         }
-
+	
+	public bool ConversacionEliminadaPor(int idConversacion, int idUsuario)
+	{
+	    return Conexion.ConversacionEliminadaPor(idConversacion, idUsuario);
+	}
         public bool EnviarMensaje(int idConversacion, int idEmisor, string texto)
         {
             return Conexion.EnviarMensaje(idConversacion, idEmisor, texto);
