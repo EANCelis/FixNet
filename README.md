@@ -12,10 +12,23 @@ Fixnet es una aplicación web desarrollada como Proyecto Final del **Grupo 3 - F
 
 ### Categorías de servicio disponibles
 
-- 🔧 Plomero
-- 🔥 Gasista
 - ⚡ Electricista
+- 🔧 Plomero
 - 💻 Técnico de PC
+- ❄️ Técnico de aires acondicionados
+- 🧱 Albañil
+- 🎨 Pintor
+- 🔥 Gasista
+- 🌿 Jardinero
+- 🪑 Carpintero
+- 🔑 Cerrajero
+- 🚛 Fletero
+- 🧹 Limpieza
+- 👨‍🍳 Cocinero
+- 🏠 Vidriero
+- ⚙️ Herrero
+- 🔒 Instalador de alarmas
+- 🐕 Paseador de perros
 
 ---
 
