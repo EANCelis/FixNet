@@ -81,6 +81,7 @@ Para quienes quieran probar la aplicación, dejo accesos de ejemplo:
 👤 **Cliente**
 - **Email:** h.simpson@gmail.com
 - **Password:** Homero123
+
 🛠️ **Prestador**
 - **Email:** h.plumber@gmail.com
 - **Password:** Plumber123
