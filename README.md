@@ -2,7 +2,7 @@
 **Plataforma web responsive para la búsqueda y contratación de profesionales del hogar.**
 Fixnet conecta usuarios que necesitan servicios de plomería, gas, electricidad o soporte técnico informático con profesionales verificados, de forma rápida y desde cualquier dispositivo.
  
-🌐 **Página oficial:** [fixnetpro.somee.com](http://fixnetpro.somee.com)
+🌐 **Página oficial:** [fixnetpro.somee.com](https://fixnetpro.somee.com)
  
 ---
 ## 📋 Descripción
