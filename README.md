@@ -79,12 +79,12 @@ Proyecto-Final/
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/MarcosSelvaggi/Proyecto-Final.git
+   git clone https://github.com/EANCelis/FixNet.git
    ```
 
 2. **Configurar la base de datos**
    - Abrir SQL Server Management Studio
-   - Ejecutar el script ubicado en la carpeta `Script sql/`
+   - Ejecutar los scripts ubicados en la carpeta `Script sql/`
    - Esto creará la base de datos con toda la estructura necesaria
 
 3. **Configurar la cadena de conexión**
